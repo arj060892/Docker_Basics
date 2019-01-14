@@ -1,8 +1,16 @@
- docker -- checking
- docker images -- getting images
+ docker -- checking and get commands
+
  docker pull image-name -- from hub
  docker run image-name
- docker ps -- show all the containers
+
+ docker images -- getting images
+ docker ps -- show all the [running] containers 
+ docker ps -a -- shows all the container
+ docker rm [containerId]  -- removes container
+ docker rmi [imageId] -- removes image
+
+ setting 
+ docker run -p 80:80 [image_name]  -- sets which ip needs to be showd
 
 
  ------------------------- docker Toolbox  --------------------------
