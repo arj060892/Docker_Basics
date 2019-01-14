@@ -1,0 +1,22 @@
+ docker -- checking
+ docker images -- getting images
+ docker pull image-name -- from hub
+ docker run image-name
+ docker ps -- show all the containers
+
+
+ ------------------------- docker Toolbox  --------------------------
+ docker-machine ls : issues all the machines 
+ docker-machine start [machine name]
+ docker-machine stop [machine name]
+ docker-machine env [machine name] -- docker-machine env default [to hook cmd to VM] 
+ docker-machine ip [machine name] -- docker-machine ip default
+ docker-machine status [machine name]
+
+
+
+ ----------------------------------------------------------------------
+
+ ------------------------- docker Kitematic  --------------------------
+GUI tools for images and containers,
+visually search on docker hub
