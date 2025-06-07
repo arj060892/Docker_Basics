@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:16
+    container_name: microservices-postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./deploy/db/init:/docker-entrypoint-initdb.d
+
+  rabbitmq:
+    image: rabbitmq:3.13-management # Using a recent version with management plugin
+    container_name: microservices-rabbitmq
+    ports:
+      - "5672:5672"   # AMQP port
+      - "15672:15672" # Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: user         # Default user for RabbitMQ
+      RABBITMQ_DEFAULT_PASS: password     # Default password
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq/ # Persist data
+
+  # ShoppingCartService will be added here later
+  # CheckoutService will be added here later
+
+volumes:
+  postgres_data:
+  rabbitmq_data:

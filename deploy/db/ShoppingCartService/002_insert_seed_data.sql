@@ -1,0 +1,3 @@
+-- Seed data for ShoppingCartService (optional)
+-- Example:
+-- INSERT INTO Carts (Id, UserId) VALUES ('...your_guid_here...', '...user_guid_here...');
